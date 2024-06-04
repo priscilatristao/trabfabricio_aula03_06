@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhe do Evento</title>
+</head>
+<body>
+    <h1>{{ evento.nome }}</h1>
+    <p>{{ evento.descricao }}</p>
+    <p>{{ evento.data }}</p>
+    <a href="{% url 'editar_evento' evento.id %}">Editar</a>
+    <form action="{% url 'excluir_evento' evento.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Excluir</button>
+    </form>
+    <a href="{% url 'pagina_inicial' %}">Voltar</a>
+</body>
+</html>

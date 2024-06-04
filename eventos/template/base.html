@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Título Padrão{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <!-- Seu cabeçalho comum aqui -->
+        <h1>Meu Site de Eventos</h1>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Conteúdo específico de cada página será substituído aqui -->
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Seu rodapé comum aqui -->
+        <p>&copy; 2024 Meu Site de Eventos</p>
+    </footer>
+</body>
+</html>

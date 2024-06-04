@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <ul>
+        {% for evento in eventos %}
+            <li><a href="{% url 'detalhe_evento' evento.id %}">{{ evento.nome }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'criar_evento' %}">Criar Novo Evento</a>
+</body>
+</html>
